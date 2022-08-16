@@ -3,10 +3,26 @@ h1 {
   text-align: center;
   padding-top: 30px;
 }
-.container {
-  width: 60%;
-  border: 1px solid #212941;
-  background-color: #9cace0;
+h2 {
+  color: rgb(83, 17, 163);
+}
+.outer {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border: 1px solid #606165;
+  background-color: #eceff5;
+  border-radius: 5px;
+  padding: 20px;
+}
+.inner {
+  display: block;
+
+  width: 850px;
+  height: 90%;
+  margin: 0 auto;
+  border: 1px solid #c5c9d2;
+  background-color: #c8d2f4;
   border-radius: 5px;
   padding: 20px;
 }
@@ -14,13 +30,14 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  width: 800px;
 }
 .grid div {
-  background-color: #28314e;
+  background-color: #ffffff;
   border: 1px solid #212941;
   border-radius: 5px;
   padding: 8px 15px;
-  color: #ffffff;
+  color: #0a0a0a;
   font-size: 18px;
   font-family: roboto;
 }
