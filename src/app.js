@@ -32,5 +32,38 @@ function displayTemperature(response) {
     ".current-wind-index#index-wind-description"
   );
   wind.innerHTML = response.data.wind.speed;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
 }
 axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
+
+function formatTime() {
+  let today = new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  let thisTime = `${today}`;
+  return thisTime;
+}
+
+const currentTimeDay = document.querySelector(".current-time#time-current");
+currentTimeDay.innerHTML = `${formatTime()}`;
+
+function formatDate() {
+  let now = new Date();
+  let date = now.getDate();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  let thisDate = `${day},${date}`;
+  return thisDate;
+}
+const currentDate = document.querySelector(".current-day#day-current");
+currentDate.innerHTML = `${formatDate()}`;
