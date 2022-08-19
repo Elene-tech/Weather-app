@@ -5,6 +5,8 @@ h1 {
 }
 h2 {
   color: rgb(83, 17, 163);
+  text-align: center;
+  padding-left: 25px;
 }
 
 .grid {
@@ -43,7 +45,7 @@ h2 {
 .grid div:nth-child(3) {
   grid-column: 1;
   grid-column-end: span 2;
-  align-self: stretch;
+  align-self: center;
   margin-left: 0;
 }
 .grid div:nth-child(4) {
@@ -82,7 +84,7 @@ li {
   margin-left: 20px;
 }
 .current-day {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
 }
 .current-image-weather {
@@ -107,4 +109,7 @@ li {
 .current-day-temperature-farenheit {
   font-weight: 300;
   font-size: 30px;
+}
+.current-visibility {
+  text-transform: capitalize;
 }
