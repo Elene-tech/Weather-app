@@ -1,6 +1,6 @@
 let apiKey = "f4717a93880ad531595d505e3579e813";
-let currentCity = "Krakow";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Krakow&appid=f4717a93880ad531595d505e3579e813&units=metric`;
+let currentCity = "Kiev";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=f4717a93880ad531595d505e3579e813&units=metric`;
 
 function displayTemperature(response) {
   console.log(response);
@@ -34,6 +34,13 @@ function displayTemperature(response) {
   wind.innerHTML = response.data.wind.speed;
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
+
+  let iconElementCurrent = document.querySelector("#current-image");
+
+  iconElementCurrent.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
 
