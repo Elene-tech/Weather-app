@@ -1,6 +1,33 @@
-let apiKey = "f4717a93880ad531595d505e3579e813";
-let currentCity = "Krakow";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=f4717a93880ad531595d505e3579e813&units=metric`;
+function formatTime() {
+  let today = new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  let thisTime = `${today}`;
+  return thisTime;
+}
+
+const currentTimeDay = document.querySelector(".current-time#time-current");
+currentTimeDay.innerHTML = `${formatTime()}`;
+
+function formatDate() {
+  let now = new Date();
+  let date = now.getDate();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  let thisDate = `${day},${date}`;
+  return thisDate;
+}
+const currentDate = document.querySelector(".current-day#day-current");
+currentDate.innerHTML = `${formatDate()}`;
 
 function displayTemperature(response) {
   console.log(response);
@@ -42,35 +69,19 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
 
-function formatTime() {
-  let today = new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-  let thisTime = `${today}`;
-  return thisTime;
+function search(city) {
+  let apiKey = "f4717a93880ad531595d505e3579e813";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f4717a93880ad531595d505e3579e813&units=metric`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
 }
 
-const currentTimeDay = document.querySelector(".current-time#time-current");
-currentTimeDay.innerHTML = `${formatTime()}`;
-
-function formatDate() {
-  let now = new Date();
-  let date = now.getDate();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()];
-  let thisDate = `${day},${date}`;
-  return thisDate;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
-const currentDate = document.querySelector(".current-day#day-current");
-currentDate.innerHTML = `${formatDate()}`;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
