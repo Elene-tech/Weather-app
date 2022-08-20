@@ -127,3 +127,7 @@ li {
 .current-visibility {
   text-transform: capitalize;
 }
+small {
+  text-align: start;
+  grid-column-end: span 2;
+}
