@@ -1,5 +1,5 @@
 let apiKey = "f4717a93880ad531595d505e3579e813";
-let currentCity = "Kiev";
+let currentCity = "Krakow";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=f4717a93880ad531595d505e3579e813&units=metric`;
 
 function displayTemperature(response) {
