@@ -34,7 +34,7 @@ h2 {
   grid-template-columns: 4fr;
   grid-column: 1;
   grid-column-end: span 3;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(2) {
@@ -47,7 +47,7 @@ h2 {
   grid-column-end: span 2;
   align-self: center;
   margin-left: 0;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(4) {
@@ -56,38 +56,38 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(5) {
   grid-column: 1;
   align-self: stretch;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 
 .grid div:nth-child(6) {
   grid-column: 2;
   align-self: stretch;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(7) {
   grid-column: 3;
   align-self: stretch;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(8) {
   grid-column: 4;
   align-self: stretch;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 .grid div:nth-child(9) {
   grid-column: 5;
   align-self: stretch;
-  background-color: #ffffff;
+  background-color: #ffffffbf;
   border: 1px solid #212941;
 }
 li {

@@ -36,6 +36,8 @@ function displayTemperature(response) {
   );
   temperatureElement1.innerHTML = Math.round(response.data.main.temp);
 
+  celciusTemperature = response.data.main.temp;
+
   let temperatureElement2 = document.querySelector(
     ".tuesday-weather-temperature-day#temperature-tuesday-day"
   );
@@ -85,3 +87,27 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemperatureElement = document.querySelector(
+    "#temperature-current-day-index"
+  );
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  currentTemperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let currentTemperatureElement = document.querySelector(
+    "#temperature-current-day-index"
+  );
+  currentTemperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
