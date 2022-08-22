@@ -113,7 +113,7 @@ li {
 }
 .current-day-temperature-celsius {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 25px;
 }
 .current-day-weather-slash {
   font-weight: 300;
@@ -121,7 +121,7 @@ li {
 }
 .current-day-temperature-farenheit {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 25px;
 }
 .current-visibility {
   text-transform: capitalize;
