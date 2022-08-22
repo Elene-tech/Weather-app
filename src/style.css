@@ -105,24 +105,23 @@ li {
   display: block;
   margin-left: 0;
 }
+
 .current-day-temperature {
   text-align: center;
-}
-.current-day-temperature {
   font-weight: 400;
   font-size: 50px;
 }
 .current-day-temperature-celsius {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
 }
 .current-day-weather-slash {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
 }
 .current-day-temperature-farenheit {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
 }
 .current-visibility {
   text-transform: capitalize;
